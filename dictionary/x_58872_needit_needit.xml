@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="0" type="collection">
+        <element display="true" label="New_field1" max_length="40" name="new_field1" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Caller Id" mandatory="true" max_length="40" name="u_caller_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="it" label="Category" max_length="40" name="u_category_2" type="string">
+            <choice>
+                <element inactive_on_update="false" label="IT" sequence="0" value="it"/>
+                <element inactive_on_update="false" label="Sales" sequence="1" value="sales"/>
+                <element inactive_on_update="false" label="HR" sequence="2" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="3" value="facilities"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Choice 1" dependent="u_category_2" dependent_on_field="u_category_2" label="Sub-Category" max_length="40" name="u_choice_3" type="string" use_dependent_field="true">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Resolution Date/Time" mandatory="true" max_length="40" name="u_glide_date_time_8" type="glide_date_time"/>
+        <element label="Creation Time" max_length="40" name="u_glide_time_4" type="glide_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Additional Comment" mandatory="true" max_length="10000" name="u_string_5" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes" mandatory="true" max_length="20000" name="u_string_6" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Resolution Notes" mandatory="true" max_length="1000" name="u_string_7" type="string"/>
+        <element label="Scripts" mandatory="true" max_length="2147483647" name="u_translated_text_9" type="translated_text"/>
+    </element>
+</database>
